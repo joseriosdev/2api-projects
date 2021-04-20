@@ -11,8 +11,15 @@
 
     <title>Movie App</title>
     <style>
-      :root{
-        --primary: orange;
+      ::-webkit-scrollbar {
+        width: 7px !important;
+      }::-webkit-scrollbar-track {
+        background: transparent !important;
+      }::-webkit-scrollbar-thumb {
+        background: #3f6184 !important;
+        border-radius: 10px;
+      }::-webkit-scrollbar-thumb:hover {
+        background: #202020 !important;
       }
       :focus{
         outline: none;
@@ -25,30 +32,15 @@
       <h2 class="text-center text-light">2 API Projects</h2>
       <a href="github-finder.html" class="btn btn-outline-light d-block mx-auto" style="width: 320px;">Open other project</a>
     </header>
-    <nav class="bg-primary bg-gradient text-white row p-2 container-fluid m-0">
-      <h3 class="col-md-6">Movie App</h3>
-      <input class="col-md-6 d-block border-0 rounded-3" type="text" placeholder="Search movie">
+    <nav class="bg-primary bg-gradient text-white  container-fluid m-0">
+      <form id="form" class="row p-2">
+        <h3 class="col-md-6">Movie App</h3>
+        <input class="col-md-6 d-block border-0 rounded-3" type="text" placeholder="Search movie" id="search">
+      </form>
     </nav>
 
     <main class="container p-4">
-      <div id="movie-gallery" class="row g-2">
-        <div class="col-sm-12 col-md-4">
-          <div class="card border-info shadow" style="width: 20rem;">
-            <img src="https://source.unsplash.com/random" class="card-img-top" alt="movie image" style="height:250px; object-fit: cover;">
-            <div class="card-body">
-              <div class="d-flex justify-content-between">
-                <h5 class="card-title text-info">Movie Title</h5>
-                <span class="text-success">&#9733;10</span>
-              </div>
-              <h6 class="card-title">Movie overview</h6>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            </div>
-          </div>
-        </div>
-   
-        
-        
-      </div>
+      <div id="movie-gallery" class="row g-4"></div>
     </main>
     <!-- Option 2: Separate Popper and Bootstrap JS -->
     
