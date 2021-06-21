@@ -53,11 +53,11 @@ function showMovies(movies) {
               <h5 class="card-title text-info">${title}</h5>
               <span class="${coloringMovieRate(vote_average)}">&#9733;${vote_average}</span>
             </div>
-            <h6 class="card-title">Overview</h6>
-            <p class="card-text">${overview}</p>
             <div class="text-info pb-2">
               ${genreids.join("")}
             </div>
+            <h6 class="card-title">Overview</h6>
+            <p class="card-text">${overview}</p>
           </div>
         </div>
         `
